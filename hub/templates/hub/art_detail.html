@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% block details %}
+<div id="main-container">
+    <div class="video-wrapper">
+        <div id="player" class="original" data-video-id="92248801">
+            <div id="playerDiv_92248801"
+                 class="playerFlvContainer mhp1138_chrome mhp1138_desktop mhp1138_chrome53 mhp1138_container mhp1138_pausedState"
+                 data-enlarge="1" data-showautoplayoption="1" data-share="1" data-processed="1">
+                <img src="{{ art.url }}">
+            </div>
+
+        </div>
+
+
+        <div class="title-container">
+            <h1 class="title">{{ art.title }}</h1>
+
+
+            <div id="flagDiv" class="main-sprite-dark gray-btn-flag flag-btn">
+                <a href="#" id="video_flag" data-title="Flag this video" class="popap tooltipTrig"></a>
+            </div>
+
+
+            <div class="clear"></div>
+        </div>
+
+
+        <div class="video-actions-menu">
+
+
+            <div class="votes-fav-wrap">
+                <div class="js-voteUp icon-wrapper tooltipTrig" data-title="I Like This">
+                    <i class="thumbs-up main-sprite-dark-2"></i>
+                    <span>Like&nbsp;&nbsp;</span>
+                </div>
+
+                <div class="js-voteDown icon-wrapper tooltipTrig" data-title="I Dislike This">
+                    <i class="thumbs-down main-sprite-dark-2"></i>
+                </div>
+
+                <div class="icon-wrapper favorite-wrapper tooltipTrig" data-title="Add to Favorites">
+                    <i class="main-sprite-dark-2 favorite"></i>
+                </div>
+            </div>
+
+            <div id="js-shareData" class="tab-menu-wrapper-table" data-duration="720"
+                 data-share-url="http://www.pornhub.com/view_video.php?viewkey=ph57f9617078fe3">
+                <div class="tab-menu-wrapper-row">
+                    <div class="tab-menu-wrapper-cell">
+                        <div class="tab-menu-item tooltipTrig active" data-tab="about-tab"
+                             data-title="See detailed info about this video">
+                            <i class="main-sprite-dark-2"></i>
+                            <span>About</span>
+                        </div>
+                    </div>
+
+
+                    <div class="tab-menu-wrapper-cell">
+                        <div class="tab-menu-item tooltipTrig shareTrig js-triggerShare" data-tab="share-tab"
+                             onclick="ga('send', 'event', 'Watch Page', 'click', 'Share Tab');"
+                             data-title="Share this video">
+                            <i class="main-sprite-dark-2"></i>
+                            <span>Share</span>
+                        </div>
+                    </div>
+                    <div class="tab-menu-wrapper-cell">
+                        <div class="tab-menu-item tooltipTrig" data-tab="download-tab"
+                             onclick="ga('send', 'event', 'Watch Page', 'click', 'Download Tab');"
+                             data-title="Download this video">
+                            <i class="main-sprite-dark-2"></i>
+                            <span>Download</span>
+                        </div>
+                    </div>
+
+                    <div class="tab-menu-wrapper-cell">
+                        <div class="tab-menu-item tooltipTrig" data-tab="add-to-tab"
+                             onclick="ga('send', 'event', 'Watch Page', 'click', 'Playlists Tab');"
+                             data-title="Add to a Playlist">
+                            <i class="main-sprite-dark-2"></i>
+                            <span>Add to</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="reset"></div>
+        </div>
+
+
+        <div class="reset"></div>
+    </div>
+
+
+    <div class="reset"></div>
+</div>
+{% endblock details %}

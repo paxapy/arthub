@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% block container %}
+<nav class="nf-categories-sidebar">
+            <div class="section_bar_sidebar">
+                <div class="section_title">Categories</div>
+            </div>
+            <div id="categoriesStraight" class="sidebar_wrapper">
+                <ul class="nf-categories tracking js-categories-hidden" style="max-height: 1716px;">
+                    <li class="alpha">
+                        <div class="checkHomepage">
+                            <a class="sidebarIndent" href="{% url 'index' %}">All</a>
+                        </div>
+                    </li>
+                    {% for category in categories %}
+                        {% if not category.slug == current_category %}
+                        <li class="alpha">
+                            <div class="checkHomepage">
+                                <a class="sidebarIndent" href="{% url 'category' category=category.slug %}">
+                                    {{ category.title }}
+                                </a>
+                            </div>
+                        </li>
+                        {% else %}
+                        <li>
+                            <div class="plusSign">&nbsp;</div>
+                            <span style="color: #FF9900;">{{ category.title }}</span>
+                        </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </nav>
+        <div class="nf-videos">
+            <div class="sectionWrapper">
+                <div class="sectionTitle">
+                <ul class="nf-videos videos search-video-thumbs">
+                    {% for art in art_list %}
+                        <li class="videoblock videoBox">
+                            <div class="wrap">
+                                <div class="phimage">
+                                    <div class="img">
+                                        <a href="{% url 'art_detail' slug=art.slug %}" title="{{ art.title }}" class="img">
+                                        <img src="{{ art.url }}"
+                                             alt="{{ art.title }}">
+                                        </a>
+                                    </div>
+                                    <div class="thumbnail-info-wrapper clearfix">
+                                        <span class="title">
+                                            <a href="{% url 'art_detail' slug=art.slug %}"
+                                               title="MMD-Rakshasa R18">{{ art.title }}</a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+                <div class="reset"></div>
+            </div>
+
+
+
+        </div>
+
+        <div class="reset"></div>
+        <div class="nf-wrapper">
+
+        </div>
+
+
+
+        <div class="reset"></div>
+        <div class="pagination3">
+            <ul class="firstPage">
+                <li class="page_current alpha"><span class="greyButton">1</span></li>
+                <li class="page_number"><a class="greyButton" href="/categories/hentai?page=2">2</a></li>
+                <li class="page_number"><a class="greyButton" href="/categories/hentai?page=3">3</a></li>
+                <li class="page_number"><a class="greyButton" href="/categories/hentai?page=4">4</a></li>
+                <li class="page_number"><a class="greyButton" href="/categories/hentai?page=5">5</a></li>
+                <li class="page_dots"><span class="greyButton"> ... </span></li>
+                <li class="page_next_set"><a class="greyButton" href="/categories/hentai?page=10">10</a></li>
+                <li class="page_next omega"><a href="/categories/hentai?page=2" class="orangeButton">Next</a></li>
+            </ul>
+        </div>
+
+{% endblock container %}
