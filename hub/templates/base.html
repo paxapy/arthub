@@ -1,4 +1,5 @@
-﻿﻿<html class="language-en chrome windows" lang="en"><!--<![endif]--><head>
+﻿{% load static %}
+﻿<html class="language-en chrome windows" lang="en"><!--<![endif]--><head>
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -28,14 +29,11 @@
 
     <link rel="stylesheet" href="http://cdn1b.static.pornhub.phncdn.com/www-static/css/premium/premium-modals.css?cache=2016100610" type="text/css">
 
-
-
-    <link rel="next" href="http://www.pornhub.com/categories/hentai?page=2">
     <!--[if lte IE 7]>
 	<link rel="stylesheet" href="http://cdn1b.static.pornhub.phncdn.com/www-static/css/ie.css?cache=2016100610" type="text/css" />
 	<![endif]-->
 
-
+    <link rel="stylesheet" href="{% static 'hub/custom.css' %}" type="text/css">
 
     <script type="text/javascript" async="" src="//cdn.engine.phn.doublepimp.com/Scripts/infinity.js.aspx?debugscript=true&amp;guid=7129f320-ce21-4b40-9d7e-37b1df8cf8f0" id="infinity" data-guid="7129f320-ce21-4b40-9d7e-37b1df8cf8f0" data-version="async" data-abr="false"></script><script type="text/javascript" async="" src="http://ss.phncdn.com/timings-1.0.0.js"></script><script type="text/javascript" async="" src="http://ss.phncdn.com/tubes-1.0.0.js"></script><script type="text/javascript" async="" src="http://ss.phncdn.com/head/load-1.0.3.js"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="http://ss.phncdn.com/html5shiv-3.6.2.js"></script>
 
@@ -308,13 +306,10 @@ top: 312px; width: 51px;"></a>
                 <div class="logo pornhub_logo " title="Pornhub">
                     <div itemscope="" itemtype="http://schema.org/Organization" class="logoWrapper">
                         <a itemprop="url" href="/" onclick="ga('send', 'event', 'Header', 'click', 'Logo');">
-                            <img itemprop="logo" title="Pornhub" alt="Pornhub" width="150" height="40" src="http://cdn1b.static.pornhub.phncdn.com/www-static/images/pornhub_logo_straight.png?cache=2016100610">
+                            <img title="Pornhub" alt="Pornhub" width="150" height="40" src="{% static 'hub/img/logo.png' %}">
                         </a>
                     </div>
                 </div>
-
-
-
 
                 <div class="headerSearchWrapper"> 					<form id="search_form" method="get" action="/video/search">
                     <fieldset class="fs-nf">
